@@ -6,6 +6,12 @@
 	"repository": "git@github.com:CodogoFreddie/jask-cli.git",
 	"author": "Freddie Ridell <freddie@codogo.io>",
 	"license": "MIT",
+	"bin": {
+		"jask-cli": "index.js"
+	},
+	"files": [
+		"lib"
+	],
 	"eslintConfig": {
 		"extends": "codogo"
 	},
