@@ -7,7 +7,7 @@
 	"author": "Freddie Ridell <freddie@codogo.io>",
 	"license": "MIT",
 	"bin": {
-		"jask-cli": "index.js"
+		"jask": "index.js"
 	},
 	"files": [
 		"lib"
