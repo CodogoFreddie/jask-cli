@@ -1,6 +1,9 @@
+import R from "ramda";
+import { initaliseJask, setPersistHandlers, runQuery, } from "jask-core";
+
 import getConfig from "./config";
 import createPersistHandlers from "./persistHandlers";
-import { initaliseJask, setPersistHandlers, runQuery, } from "jask-core";
+import render from "./render";
 
 const [_, __, ...args] = process.argv;
 
@@ -17,7 +20,7 @@ getConfig()
 		});
 
 		return initaliseJask().then(() =>
-			console.log(runQuery(args.join(" "))),
+			R.pipe(R.join(" "), runQuery, render(config), console.log)(args),
 		);
 	})
 	.catch(console.error);

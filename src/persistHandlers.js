@@ -5,10 +5,10 @@ import R from "ramda";
 
 export default config => ({
 	listActions: () =>
-		new Promise((done, fail) => {
+		new Promise(done => {
 			recursive(config.dataFolder, (err, files) => {
 				err
-					? fail(err)
+					? done([])
 					: done(
 						files.map(R.replace(config.dataFolder + "/", "")) ||
 								[],
