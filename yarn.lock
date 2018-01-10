@@ -668,15 +668,30 @@ babel-plugin-jest-hoist@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-20.0.3.tgz#afedc853bd3f8dc3548ea671fbe69d03cc2c1767"
 
+babel-plugin-macros@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.0.0.tgz#fd3aee135f7dec0b82898b7c8f1aed6fa75f9af9"
+  dependencies:
+    cosmiconfig "3.1.0"
+
 babel-plugin-node-source-map-support@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-node-source-map-support/-/babel-plugin-node-source-map-support-0.0.1.tgz#600a49bf76fcb4bf24a9cedbde8ad25246020769"
 
-babel-plugin-preval@^1.5.0, babel-plugin-preval@^1.6.2:
+babel-plugin-preval@^1.5.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/babel-plugin-preval/-/babel-plugin-preval-1.6.2.tgz#8f580a1d4579d5fc79f1cfaee6f9fe0996fdeb1f"
   dependencies:
     babel-macros "^1.1.1"
+    babel-register "^6.26.0"
+    babylon "^6.18.0"
+    require-from-string "^2.0.1"
+
+babel-plugin-preval@^1.6.3:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/babel-plugin-preval/-/babel-plugin-preval-1.6.3.tgz#df784357410a9762f01bf0c5705e2c070eac3ccb"
+  dependencies:
+    babel-plugin-macros "^2.0.0"
     babel-register "^6.26.0"
     babylon "^6.18.0"
     require-from-string "^2.0.1"
@@ -2672,7 +2687,53 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.13.1, eslint@^4.9.0:
+eslint-visitor-keys@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
+
+eslint@^4.15.0:
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.15.0.tgz#89ab38c12713eec3d13afac14e4a89e75ef08145"
+  dependencies:
+    ajv "^5.3.0"
+    babel-code-frame "^6.22.0"
+    chalk "^2.1.0"
+    concat-stream "^1.6.0"
+    cross-spawn "^5.1.0"
+    debug "^3.1.0"
+    doctrine "^2.0.2"
+    eslint-scope "^3.7.1"
+    eslint-visitor-keys "^1.0.0"
+    espree "^3.5.2"
+    esquery "^1.0.0"
+    esutils "^2.0.2"
+    file-entry-cache "^2.0.0"
+    functional-red-black-tree "^1.0.1"
+    glob "^7.1.2"
+    globals "^11.0.1"
+    ignore "^3.3.3"
+    imurmurhash "^0.1.4"
+    inquirer "^3.0.6"
+    is-resolvable "^1.0.0"
+    js-yaml "^3.9.1"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.3.0"
+    lodash "^4.17.4"
+    minimatch "^3.0.2"
+    mkdirp "^0.5.1"
+    natural-compare "^1.4.0"
+    optionator "^0.8.2"
+    path-is-inside "^1.0.2"
+    pluralize "^7.0.0"
+    progress "^2.0.0"
+    require-uncached "^1.0.3"
+    semver "^5.3.0"
+    strip-ansi "^4.0.0"
+    strip-json-comments "~2.0.1"
+    table "^4.0.1"
+    text-table "~0.2.0"
+
+eslint@^4.9.0:
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.13.1.tgz#0055e0014464c7eb7878caf549ef2941992b444f"
   dependencies:
@@ -4145,9 +4206,9 @@ istanbul-reports@^1.1.3:
   dependencies:
     handlebars "^4.0.3"
 
-jask-core@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/jask-core/-/jask-core-0.1.1.tgz#c3be537c8ac6c3dc20630bd78bc1ed5bfdd54c4f"
+jask-core@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/jask-core/-/jask-core-0.1.4.tgz#58ba25cabfba2d6bfe88c7d3684237347da949d7"
   dependencies:
     chrono-node "^1.3.5"
     date-fns "^2.0.0-alpha.7"
@@ -4990,6 +5051,10 @@ node-forge@0.6.33:
   version "0.6.33"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.6.33.tgz#463811879f573d45155ad6a9f43dc296e8e85ebc"
 
+node-forge@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.7.1.tgz#9da611ea08982f4b94206b3beb4cc9665f20c300"
+
 node-int64@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/node-int64/-/node-int64-0.4.0.tgz#87a9065cdb355d3182d8f94ce11188b825c68a3b"
@@ -5339,9 +5404,9 @@ parcel-bundler@^1.2.1:
     worker-farm "^1.4.1"
     ws "^3.3.3"
 
-parcel-bundler@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.3.0.tgz#6bdea2d9acc696d8bf9a3a36e77c56defcffccc8"
+parcel-bundler@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/parcel-bundler/-/parcel-bundler-1.4.1.tgz#9f86d9d113d5fdf130dd414508c7a75293be0c61"
   dependencies:
     babel-core "^6.25.0"
     babel-generator "^6.25.0"
@@ -5362,6 +5427,7 @@ parcel-bundler@^1.3.0:
     json5 "^0.5.1"
     micromatch "^3.0.4"
     mkdirp "^0.5.1"
+    node-forge "^0.7.1"
     node-libs-browser "^2.0.0"
     opn "^5.1.0"
     physical-cpu-count "^2.0.0"
